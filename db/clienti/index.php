@@ -24,7 +24,7 @@
             die("Connection failed: " . mysqli_connect_error());
         }
 
-        //esegui una query di esempio
+        //esegui la query che legge la tabella clienti
         $query = 'SELECT * FROM clienti';
 
         $result = mysqli_query($mysqli, $query);
