@@ -31,8 +31,7 @@
 
         //ciclo sulle righe restituite e stampo il valore di ogni riga
         while ($row = mysqli_fetch_assoc($result)) {
-            echo '<h2>' . $row['id'] . '</h2>
-            <div>' . $row['nome'] . ' ' . $row['cognome'] . '</div>';
+            echo '<div><h2>' . $row['id'] . '</h2><p>' . $row['nome'] . ' ' . $row['cognome'] . '</p></div>';
         }
     ?>
 </body>
