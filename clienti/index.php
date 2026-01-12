@@ -11,19 +11,12 @@
         Clienti
     </h1>
     <?php
-        //inizializza la connessione al database
-        $databaseHost = 'localhost';
-        $databaseName = 'cescot';
-        $databaseUsername = 'root';
-        $databasePassword = '';
+        //uso della libreria
+        require_once '../librerie/library.php';
 
-        $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-
-        //verifica la connessione
-        if (!$mysqli) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
-
+        //inizializza la connessione al database tramite funzione contenuta nella libreria libreria
+        connectDatabase('clienti');
+        
         //esegui la query che legge la tabella clienti
         $query = 'SELECT * FROM clienti';
 
