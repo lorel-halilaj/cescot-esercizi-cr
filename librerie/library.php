@@ -3,7 +3,7 @@
         echo "<div class='" . $class . "'>" . $text . "</div>";
     };
 
-    function connectDatabase($host = 'localhost', $username = 'root', $password = '', $dbname) {
+    function connectDatabase($dbname, $host = 'localhost', $username = 'root', $password = '') {
         $databaseHost = $host;
         $databaseName = $dbname;
         $databaseUsername = $username;
