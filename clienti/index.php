@@ -15,11 +15,10 @@
         require_once '../librerie/library.php';
 
         //inizializza la connessione al database tramite funzione contenuta nella libreria libreria
-        connectDatabase('clienti');
-        
+        $dbConnection = connectDatabase('cescot');
+
         //esegui la query che legge la tabella clienti
         $query = 'SELECT * FROM clienti';
-
         $result = mysqli_query($mysqli, $query);
 
         //ciclo sulle righe restituite e stampo il valore di ogni riga
