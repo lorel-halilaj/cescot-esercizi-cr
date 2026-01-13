@@ -15,5 +15,6 @@
         if (!$mysqli) {
             die("Connection failed: " . mysqli_connect_error());
         }
+        return $mysqli;
     }
 ?>

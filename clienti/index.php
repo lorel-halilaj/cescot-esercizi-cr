@@ -18,8 +18,8 @@
         $dbConnection = connectDatabase('cescot');
 
         //esegui la query che legge la tabella clienti
-        $query = 'SELECT * FROM clienti';
-        $result = mysqli_query($mysqli, $query);
+        $query = 'SELECT id, nome, cognome FROM clienti';
+        $result = mysqli_query($dbConnection, $query);
 
         //ciclo sulle righe restituite e stampo il valore di ogni riga
         while ($row = mysqli_fetch_assoc($result)) {
