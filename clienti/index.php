@@ -23,7 +23,8 @@
 
         //ciclo sulle righe restituite e stampo il valore di ogni riga
         while ($row = mysqli_fetch_assoc($result)) {
-            echo '<div><h2>' . $row['id'] . '</h2><p>' . $row['nome'] . ' ' . $row['cognome'] . '</p></div>';
+            $clientiDivContent = '<h2>' . $row['id'] . '</h2><p>' . $row['nome'] . ' ' . $row['cognome'] . '</p>';
+            printDiv($clientiDivContent, 'cliente');
         }
     ?>
 </body>
