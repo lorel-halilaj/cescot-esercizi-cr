@@ -1,4 +1,4 @@
-SELECT cl.nome, cl.cognome, p.tipo_struttura, c.citta
+SELECT DISTINCT cl.nome, cl.cognome
 FROM clienti cl
 JOIN citta c ON c.id_citta = cl.citta
 JOIN prenotazioni p ON p.cliente = cl.id_cliente
